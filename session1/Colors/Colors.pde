@@ -33,7 +33,9 @@ rect(200, 50, 150, 150);
 fill(0, 0, 255);
 rect(50, 200, 150, 150);
 
-fill(255, 255, 255, 255);
+// Set shape fill color to white, that is, a maximum intensity (255) in all channels
+// (R, G, B):
+fill(255, 255, 255);
 rect(200, 200, 150, 150);
 
 fill(0, 0, 0, 0);
