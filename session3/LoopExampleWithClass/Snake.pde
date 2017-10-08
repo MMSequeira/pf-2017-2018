@@ -18,8 +18,18 @@ class Snake {
   }
   
   void display() {
-    displayHead();
     displayBody();
+    displayHead();
+  }
+
+  void displayBody() {
+    fill(255);
+    ellipse(x, y + 0 * diameter, diameter, diameter);
+    ellipse(x, y + 1 * diameter, diameter, diameter);
+    ellipse(x, y + 2 * diameter, diameter, diameter);
+    ellipse(x, y + 3 * diameter, diameter, diameter);
+    ellipse(x, y + 4 * diameter, diameter, diameter);
+    ellipse(x, y + 5 * diameter, diameter, diameter);
   }
 
   void displayHead() {
@@ -34,51 +44,5 @@ class Snake {
     fill(255);
     ellipse(x - radius / 2, headY, radius / 2, radius / 2);
     ellipse(x + radius / 2, headY, radius / 2, radius / 2);
-  }
-
-  void displayBody() {
-    fill(255);
-    ellipse(x, y + 0 * diameter, diameter, diameter);
-    ellipse(x, y + 1 * diameter, diameter, diameter);
-    ellipse(x, y + 2 * diameter, diameter, diameter);
-    ellipse(x, y + 3 * diameter, diameter, diameter);
-    ellipse(x, y + 4 * diameter, diameter, diameter);
-    ellipse(x, y + 5 * diameter, diameter, diameter);
-  }
-
-  void displayBodyNotSoBadly() {
-    fill(255);
-    float ringY = y;
-    while (ringY < y + 6 * diameter) {
-      ellipse(x, ringY, diameter, diameter);
-      ringY += diameter;
-    }
-  }
-
-  void displayBodyBadly() {
-    fill(255);
-    float ringY = y;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-    ellipse(x, ringY, diameter, diameter);
-    ringY += diameter;
-  }
-
-  void displayBodyVeryBadly() {
-    fill(255);
-    ellipse(x, y, diameter, diameter);
-    ellipse(x, y + 1 * diameter, diameter, diameter);
-    ellipse(x, y + 2 * diameter, diameter, diameter);
-    ellipse(x, y + 3 * diameter, diameter, diameter);
-    ellipse(x, y + 4 * diameter, diameter, diameter);
-    ellipse(x, y + 5 * diameter, diameter, diameter);
   }
 }
