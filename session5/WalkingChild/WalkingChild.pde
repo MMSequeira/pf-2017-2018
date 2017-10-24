@@ -13,10 +13,11 @@ void setup() {
 void draw() {
   background(128);
   
-  if (walkRight)
-    child.walkBy(run ? 5 : 1);
-  if (walkLeft)
-    child.walkBy(run ? -5 : -1);
+  if (walkRight != walkLeft)
+    if (walkRight)
+      child.walkBy(run ? 5 : 1);
+    else if (walkLeft)
+      child.walkBy(run ? -5 : -1);
     
   child.display();
 }
