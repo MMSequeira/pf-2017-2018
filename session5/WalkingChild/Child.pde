@@ -1,3 +1,4 @@
+// Original images: http://bit.ly/2zOxLvo
 class Child {
   float x, y;
   float scale;
