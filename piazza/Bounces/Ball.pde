@@ -78,7 +78,7 @@ class Ball {
 
 void bounce(Ball b1, Ball b2) {
   // First, find the normalized vector n from the center of b1 to the center of b2:
-  PVector n = PVector.sub(b1.r,  b2.r).normalize();
+  PVector n = PVector.sub(b2.r,  b1.r).normalize();
 
   // Find the length of the component of each of the velocity vectors along n: 
   // a1 = v1 . n
