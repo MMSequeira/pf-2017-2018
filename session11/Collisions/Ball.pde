@@ -28,7 +28,7 @@ class Ball {
   float nextCollisionWith(Ball other) {
     // All calculations performed as if the other ball were stopped. We thus 
     // change to a frame of reference attached to the other ball. In this
-    // frame of reference, the other ball is stopped and this ball as a
+    // frame of reference, the other ball is stopped and this ball has a
     // relative velocity which equals its absolute velocity subtracted
     // of the velocity of the other ball:
     PVector rv = PVector.sub(this.v, other.v);
@@ -150,11 +150,13 @@ class Ball {
 
     // Calculate this.v', the new velocity vector of this:
     // this.v' = this.v - optimizedP * other.m * n
-    this.v = PVector.sub(this.v, PVector.mult(n, optimizedP * other.m));
+    //this.v = PVector.sub(this.v, PVector.mult(n, optimizedP * other.m));
+    this.v.sub(PVector.mult(n, optimizedP * other.m));
 
     // Calculate other.v', the new velocity vector of other:
     // other.v' = other.v + optimizedP * this.m * n
-    other.v = PVector.add(other.v, PVector.mult(n, optimizedP * this.m));
+    //other.v = PVector.add(other.v, PVector.mult(n, optimizedP * this.m));
+    other.v.add(PVector.mult(n, optimizedP * this.m));
   }
 
   // Walls should actually be considered as four independent infinite
