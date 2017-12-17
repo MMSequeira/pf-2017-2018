@@ -1,3 +1,6 @@
+// Slightly modified version of Ptmx. See original code in:
+//  https://github.com/linux-man/ptmx
+
 public class Ptmx {
   private float version;
   private String filename, orientation, renderorder, staggeraxis; //renderorder is not used. Always "right-down"
