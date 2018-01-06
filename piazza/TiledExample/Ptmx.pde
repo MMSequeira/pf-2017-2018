@@ -1,5 +1,9 @@
 // Slightly modified version of Ptmx. See original code in:
 //  https://github.com/linux-man/ptmx
+//
+// Beware! The modifications are incomplete. Ptmx avoids drawing out of screen
+// tiles, and that part of the code was not updated. This means large maps will
+// be clipped in weird places! Beware!
 
 public class Ptmx {
   private float version;

@@ -6,8 +6,11 @@
     (b) It no longer paints the whole background black. Rather, it leaves
         it untouched, which means maps can nicely overlap fancy
         backgrounds.
-    (c) It no longer resets the reference system matrix, which means all
+    (c) It no longer resets the coordinate system matrix, which means all
         transformations can be applied to the map!
+    (d) Beware! The change is incomplete. Ptmx avoids drawing out of screen
+        tiles, and that part of the code was not updated. This means large
+        maps will be clipped in weird places! Beware!
  2. We have a fancy camera, which follows a game entity (in the case the
     ball) within a certain margin, which can be zoomed in and out, rotated,
     and reset.
